@@ -1,0 +1,14 @@
+export const SHOW_DATA = 'SHOW_DATA';
+export const SHOW_ONE = 'SHOW_ONE';
+export const SHOW_INSPEC='SHOW_INSPEC';
+export const SET_DATA = 'SET_DATA';
+export const GET_ONE = 'GET_ONE';
+export const GET_INSPEC = 'GET_INSPEC';
+export const GET_INSPEC_DETAIL = 'GET_INSPEC_DETAIL';
+export const SHOW_INSPEC_DETAIL = 'SHOW_INSPEC_DETAIL';
+export const TOGGLE_FILTER = 'TOGGLE_FILTER';
+export const CLOSE_FILTER = 'CLOSE_FILTER';
+export const FILTER = 'FILTER';
+export const TOGGLE_CHECK = 'TOGGLE_CHECK';
+export const DELETE_EMPLOYEE = 'DELETE_EMPLOYEE';
+export const GET_MANY = 'GET_MANY';
