@@ -37,10 +37,10 @@ class SecondSection extends Component {
         var {datainsde} = this.props;
         var datalast = [];
         if(datainsde.length>0){
-            datainsde.map((da,index)=>{
+            datainsde.map((da)=>{
                 if(da.employeeid === dataone.employeeid){
                     datalast.push({
-                        key: index,
+                        key: da.id,
                         id: da.id,
                         checklist: da.checklist,
                         date: da.date,

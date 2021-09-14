@@ -9,10 +9,10 @@ class App extends Component {
   showContent = (routes) =>{
     var rs = null;
     if(routes.length>0){
-      rs=routes.map((route,index)=>{
+      rs=routes.map((route)=>{
         return(
           <Route
-            key={index}
+            key={route.id}
             path={route.path}
             exact={route.exact}
             component={route.main}

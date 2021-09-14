@@ -24,9 +24,9 @@ class Home extends Component {
     showEmployeeID = (data) => {
         var rs = null;
         if (data.length > 0) {
-            rs = data.map((da, index) => {
+            rs = data.map((da) => {
                 return (
-                    <Option value={da.employeeid}>{da.employeeid}</Option>
+                    <Option key={da.id} value={da.employeeid}>{da.employeeid}</Option>
                 );
             });
         }
@@ -35,9 +35,9 @@ class Home extends Component {
     showDepartment = (data) => {
         var rs = null;
         if (data.length > 0) {
-            rs = data.map((da, index) => {
+            rs = data.map((da) => {
                 return (
-                    <Option value={da.department}>{da.department}</Option>
+                    <Option key={da.id} value={da.department}>{da.department}</Option>
                 );
             });
         }
@@ -46,9 +46,9 @@ class Home extends Component {
     showEmail = (data) => {
         var rs = null;
         if (data.length > 0) {
-            rs = data.map((da, index) => {
+            rs = data.map((da) => {
                 return (
-                    <Option value={da.email}>{da.email}</Option>
+                    <Option key={da.id} value={da.email}>{da.email}</Option>
                 );
             });
         }

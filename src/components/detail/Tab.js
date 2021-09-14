@@ -13,14 +13,14 @@ class Tab extends Component {
             <div className="tab" style={{ paddingTop: '4rem' }}>
                 <div>
                     <h3>Employess 
-                        <i class="fas fa-chevron-right" style={{paddingLeft:'1rem',color:'white'}}></i>
+                        <i className="fas fa-chevron-right" style={{paddingLeft:'1rem',color:'white'}}></i>
                     </h3>
                     <h3 className="number-employ">{dataone.firstname + ' ' + dataone.lastname}</h3>
                 </div>
                 <div className="right-item">                    
                     <div>
                         <a href="#">
-                            <i class="fas fa-ellipsis-v" style={{color:'white', fontSize: '1.4rem'}}></i>
+                            <i className="fas fa-ellipsis-v" style={{color:'white', fontSize: '1.4rem'}}></i>
                         </a>
                     </div>
 

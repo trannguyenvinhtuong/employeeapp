@@ -13,7 +13,7 @@ class Navcp extends Component{
                 <div>
                     <Link to="/" className="company-name">
                         north star motors
-                        <i class="fas fa-caret-down" style={{paddingLeft:'.5rem'}}></i>
+                        <i className="fas fa-caret-down" style={{paddingLeft:'.5rem'}}></i>
                     </Link>
                 </div>
                 <nav>    

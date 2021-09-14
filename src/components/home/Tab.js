@@ -129,13 +129,13 @@ class Tab extends Component {
                     <div>
                         <Dropdown overlay={menu}>
                             <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                <i class="fas fa-filter" style={{ color: 'white', fontSize: '1.3rem' }}></i>
+                                <i className="fas fa-filter" style={{ color: 'white', fontSize: '1.3rem' }}></i>
                             </a>
                         </Dropdown>
                     </div>
                     <div>
                         <a onClick={this.onToggleFilter}>
-                            <i class="fas fa-ellipsis-v" style={{ color: 'white', fontSize: '1.4rem' }}></i>
+                            <i className="fas fa-ellipsis-v" style={{ color: 'white', fontSize: '1.4rem' }}></i>
                         </a>
                     </div>
 
