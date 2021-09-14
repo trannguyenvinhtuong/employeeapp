@@ -7,10 +7,6 @@ import * as action from '../../actions';
 import Tableofdata from "./Tableofdata";
 import * as FileSaver from 'file-saver';
 import * as XLSX from 'xlsx';
-import ReactExport from "react-data-export";
-
-const ExcelFile = ReactExport.ExcelFile;
-const ExcelSheet = ReactExport.ExcelFile.ExcelSheet;
 
 class Tab extends Component {
 
