@@ -93,22 +93,22 @@ class Tab extends Component {
         var { toogleCheck } = this.props;
         const menu = (
             <Menu>
-                <Menu.Item icon={toogleCheck === true ? <DownOutlined /> : ''} onClick={this.onToogleCheck}>
+                <Menu.Item key="1" icon={toogleCheck === true ? <DownOutlined /> : ''} onClick={this.onToogleCheck}>
                     <a target="_blank" rel="noopener noreferrer">
                         Select Columns
                     </a>
                 </Menu.Item>
-                <Menu.Item>
+                <Menu.Item key="2">
                     <a target="_blank" rel="noopener noreferrer" onClick={this.onExport}>
                         Download Employees
                     </a>
                 </Menu.Item>
-                <Menu.Item>
+                <Menu.Item key="3">
                     <a target="_blank" rel="noopener noreferrer">
                         Import Employee
                     </a>
                 </Menu.Item>
-                <Menu.Item>
+                <Menu.Item key="4">
                     <a target="_blank" rel="noopener noreferrer" onClick={this.onDeleteE}>
                         Delete Employee
                     </a>
