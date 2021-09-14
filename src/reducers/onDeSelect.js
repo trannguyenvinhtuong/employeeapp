@@ -4,11 +4,10 @@ var initialState = [];
 
 var myReducer = (state = initialState, action) => {
     switch (action.type) {
-        case type.DELETE_EMPLOYEE:
-            state.push(action.deldata);                       
-            return [...state];
-        case type.CLEAR_DEL:
+        case type.DE_SELECT:
             state = [];
+            return state;
+        case type.GET_SELECT:            
             return state;
         default:
             return state;

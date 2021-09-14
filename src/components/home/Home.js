@@ -5,6 +5,7 @@ import Tableofdata from './Tableofdata';
 import { connect } from 'react-redux';
 import { Row, Col, Input, Select } from 'antd';
 import 'antd/dist/antd.css';
+import Navcp from './Navcp';
 
 const { Option } = Select;
 

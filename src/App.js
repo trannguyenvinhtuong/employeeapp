@@ -24,7 +24,7 @@ class App extends Component {
 }
   render() {
     return (
-      <Router> 
+      <Router>
         <Navcp />
         <Switch>
           {this.showContent(routes)}

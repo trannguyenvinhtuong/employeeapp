@@ -8,6 +8,7 @@ import onFilter from './onFilter';
 import toogleCheck from './tooglecheck';
 import onDeleteE from './onDeleteE';
 import getMany from './getmany';
+import onDeSelect from "./onDeSelect";
 
 const myReducer = combineReducers({
     showData,
@@ -18,7 +19,8 @@ const myReducer = combineReducers({
     onFilter,
     toogleCheck,
     onDeleteE,
-    getMany
+    getMany,
+    onDeSelect
 });
 
 export default myReducer;

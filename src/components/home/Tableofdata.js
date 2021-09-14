@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom';
 import userimg from './../../img/person.jpg';
 import { connect } from 'react-redux';
 import * as action from '../../actions';
+import Tab from './Tab';
 
 const columns = [
     {
@@ -44,7 +45,8 @@ class Tableofdata extends Component {
             filtername: '',
             filterid: -1,
             filterde: '',
-            filterem: ''
+            filterem: '',
+            selectedRowKeys: []
         }
     }
 
@@ -54,7 +56,13 @@ class Tableofdata extends Component {
         })
     }
 
-    render() {
+    onDeSelect = () => {
+        this.setState({
+            selectedRowKeys: []
+        })
+    }
+
+    render() {        
         var {toogleCheck, data} = this.props;
         var { filtername, filterid, filterde, filterem } = this.state;
         var { filter } = this.props;
@@ -84,18 +92,18 @@ class Tableofdata extends Component {
         const rowSelection = {
             onChange: (selectedRowKeys, selectedRows) => {
                 if(selectedRowKeys.length > 0){
-                    // this.props.deleteEmploy(selectedRowKeys);                  
+                    // this.props.deleteEmploy(selectedRowKeys);   
+                    this.setState({selectedRowKeys : selectedRowKeys});               
                     
                     this.props.deleteEmploy(selectedRows);                    
                 }                            
             }
           };
-        
-        return (
+        return (            
             <div>
                 <Table
                     className="table-data"  
-                             
+                    rowKey = 'id'
                     rowSelection={toogleCheck === true ? {
                         type: 'checkbox',  
                         ...rowSelection,                     
@@ -120,6 +128,9 @@ const mapDispatchToProps = (dispatch, props) =>{
     return{
         deleteEmploy : (deldata) =>{
             dispatch(action.onDeleteE(deldata))
+        },
+        requestDelete: (id) => {
+            dispatch(action.requestDelete(id))
         }
     }
 }

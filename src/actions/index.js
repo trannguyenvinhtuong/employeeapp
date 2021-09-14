@@ -151,6 +151,24 @@ export const onDeleteE = (deldata) =>{
     }
 }
 
+export const onClearDel = () =>{
+    return{
+        type: type.CLEAR_DEL
+    }
+}
+
+export const onDeSelect = () =>{
+    return{
+        type: type.DE_SELECT
+    }
+}
+
+export const getSelect = () =>{
+    return{
+        type: type.GET_SELECT
+    }
+}
+
 export const requestDelete = (id) =>{
     return(dispatch)=>{
         return axios({
@@ -159,6 +177,7 @@ export const requestDelete = (id) =>{
             data:null
         }).then(res =>{
             console.log(res);
+            dispatch(onClearDel());
         }).catch(err=>{
             console.log(err);
         });

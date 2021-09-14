@@ -12,3 +12,6 @@ export const FILTER = 'FILTER';
 export const TOGGLE_CHECK = 'TOGGLE_CHECK';
 export const DELETE_EMPLOYEE = 'DELETE_EMPLOYEE';
 export const GET_MANY = 'GET_MANY';
+export const CLEAR_DEL = 'CLEAR_DEL';
+export const DE_SELECT = 'DE_SELECT';
+export const GET_SELECT = 'GET_SELECT';

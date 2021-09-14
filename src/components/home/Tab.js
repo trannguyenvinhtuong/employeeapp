@@ -7,6 +7,7 @@ import * as action from '../../actions';
 import Tableofdata from "./Tableofdata";
 import * as FileSaver from 'file-saver';
 import * as XLSX from 'xlsx';
+import { act } from "react-dom/test-utils";
 
 class Tab extends Component {
 
@@ -26,16 +27,25 @@ class Tab extends Component {
         return rs;
     }
     onDeleteE = () => {
-        if (this.props.deldata.length < 1) {
+        var { deldata } = this.props;
+        var da = [];
+        deldata.map((d, index) => {
+            da.push(d[index]);
+        })
+        console.log(da);
+        if (da.length < 1) {
             alert('Please check!');
+            return;
+        }
+        else if (da.length > 1) {
+            alert('Xóa được 1 người thôi bạn ei');
+            this.props.onClearDel();
+            return;
         }
         else {
-            var { deldata } = this.props;
+
             if (confirm('Are you sure?')) { //eslint-disable-line  
-                var da = [];
-                deldata.map((d, index) => {
-                    da.push(d[index]);
-                })
+
                 da.map((d, index) => {
                     try {
                         this.requestDelete(d.id);
@@ -46,7 +56,7 @@ class Tab extends Component {
                 })
                 alert("Done!");
                 this.props.requestData();
-                <Tableofdata status={false} />
+                
                 this.props.onDeleteEmploy([]);
             }
         }
@@ -83,7 +93,7 @@ class Tab extends Component {
 
             var { datamany } = this.props;
             this.exportData(datamany, "dulieu");
-           
+
         }
     }
     render() {
@@ -172,6 +182,9 @@ const mapDispatchToProps = (dispatch, props) => {
         },
         getMany: (data) => {
             dispatch(action.getMany(data));
+        },
+        onClearDel: () => {
+            dispatch(action.onClearDel());
         }
     }
 }
