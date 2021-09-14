@@ -34,7 +34,7 @@ class FirstSection extends Component {
                                             <img src={userimg} />
                                         </div>
                                         <div className="icon-plus">
-                                            <i class="fas fa-plus"></i>
+                                            <i className="fas fa-plus"></i>
                                         </div>
                                     </div>
 
