@@ -5,7 +5,7 @@ import Details from "./components/detail/Details";
 const routes = [
   {
     id: 1,
-    path: "/employeeapp",
+    path: "/",
     exact: true,
     main: () => <Home />,
   },

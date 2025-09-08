@@ -6,7 +6,7 @@ class Navcp extends Component {
   render() {
     return (
       <header>
-        <Link to="/employeeapp">
+        <Link to="/">
           <i
             className="fas fa-bars"
             style={{
@@ -19,7 +19,7 @@ class Navcp extends Component {
           penske
         </Link>
         <div>
-          <Link to="/employeeapp" className="company-name">
+          <Link to="/" className="company-name">
             north star motors
             <i
               className="fas fa-caret-down"
